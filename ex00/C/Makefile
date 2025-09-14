@@ -5,7 +5,7 @@ SRC		:=	Colleen.c
 all:	$(NAME)
 
 $(NAME):	$(SRC) Makefile
-	@cc $(SRC) -fsanitize=address -o $(NAME)
+	@cc $(SRC) -o $(NAME)
 
 clean:
 	@rm $(NAME)
