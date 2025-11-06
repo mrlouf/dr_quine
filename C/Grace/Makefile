@@ -5,13 +5,14 @@ SRC		:=	Grace.c
 all:	$(NAME)
 
 $(NAME):	$(SRC) Makefile
-	@cc $(SRC) -o $(NAME)
+	@gcc $(SRC) -o $(NAME)
 
 clean:
 	@rm $(NAME)
 
 fclean:	clean
-	@rm $(NAME)
+	@rm Grace.o
+	@rm Grace_kid.c
 
 re:	fclean all
 
