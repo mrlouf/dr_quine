@@ -8,7 +8,7 @@ all:	$(NAME)
 
 $(NAME):	$(SRC) Makefile
 	@nasm -f elf64 $(SRC) -o $(OBJ)
-	@gcc -no-pie $(OBJ) -fsanitize=address -o $(NAME)
+	@gcc -no-pie $(OBJ) -o $(NAME)
 
 clean:
 	@rm $(OBJ)
