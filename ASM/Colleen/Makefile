@@ -4,17 +4,20 @@ SRC		:=	Colleen.s
 
 OBJ		:=	Colleen.o
 
+LDFLAGS	:=	-no-pie
+LDLIBS	:=	-lc
+
 all:	$(NAME)
 
 $(NAME):	$(SRC) Makefile
 	@nasm -f elf64 $(SRC) -o $(OBJ)
-	@gcc -no-pie $(OBJ) -o $(NAME)
+	@gcc $(LDFLAGS) $(OBJ) -o $(NAME) $(LDLIBS)
 
 clean:
-	@rm $(OBJ)
+	@rm -f $(OBJ)
 
 fclean:	clean
-	@rm $(NAME)
+	@rm -f $(NAME)
 
 re:	fclean all
 
