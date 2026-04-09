@@ -1,6 +1,6 @@
-NAME	:=	Sally
+NAME	:=	Sully
 
-SRC		:=	Sally.c
+SRC		:=	Sully.c
 
 all:	$(NAME)
 
@@ -11,7 +11,7 @@ clean:
 	@rm $(NAME)
 
 fclean:	clean
-	@rm $(NAME)
+	@rm Sully_*
 
 re:	fclean all
 

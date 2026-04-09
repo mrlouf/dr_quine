@@ -8,11 +8,11 @@ $(NAME):	$(SRC) Makefile
 	@gcc $(SRC) -o $(NAME)
 
 clean:
-	@rm $(NAME)
+	@-rm $(NAME)
 
 fclean:	clean
-	@rm Grace.o
-	@rm Grace_kid.c
+	@-rm Grace.o
+	@-rm Grace_kid.c
 
 re:	fclean all
 
